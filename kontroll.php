@@ -15,3 +15,32 @@ a) defineeritud muutujate abil
     Sinu kooli email
 b) Väljastatud muutujate väärtused koos sobiva tekstiga hmtl faili kujul
 */
+
+//muutujate defineerimine - ainult nimetamine
+$eesnimi = 'Mari-Liis';
+$perenimi = 'Truija';
+$kursusetahis = 'KD';
+$kursusenumber = '18';
+$email = 'mari-liis.truija@khk.ee';
+
+//muutujate esile kutsumine, FUNKTSIOON (ilma selleta ei saaks html osas kirjutada)
+var_dump($eesnimi);
+var_dump($perenimi);
+var_dump($kursusetahis);
+var_dump($kursusenumber);
+var_dump($email);
+
+//kutsun esile, väljastan koodis
+
+echo'
+    <!doctype html> 
+        <head>
+            <title>Ülesanne1</title>
+        </head>
+        <body>
+            <h1>'.$eesnimi.' '.$perenimi.'</h1>
+            <h1>'.$kursusetahis.' '.$kursusenumber.'</h1>
+            <h1>'.$email.'</h1>
+        </body>
+    </html>
+';
