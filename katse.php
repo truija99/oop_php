@@ -48,23 +48,7 @@ echo '
         <body>';
 if($naitaSisu == true) {
     // sisu väljastamine
-    echo '  <h1>' . $sisuPealkiri . '</h1>
-            <h3>Andmetüübid</h3>
-            <ul>
-                <li>$taisarv = ' . $taisarv . ' - ' . gettype($taisarv) . '</li>
-                <li>$reaalarv = ' . $reaalarv . ' - ' . gettype($reaalarv) . '</li>
-                <li>$tekst = ' . $tekst . ' - ' . gettype($tekst) . '</li>
-                <li>$toevaartusTrue = ' . $toevaartusTrue . ' - ' . gettype($toevaartusTrue) . '</li>
-                <li>$toevaartusFalse = ' . $toevaartusFalse . ' - ' . gettype($toevaartusFalse) . '</li>
-            </ul>
-            ';
-    // tüübi teisendamise katse
-    echo $taisarv . ' + ' . $taisarv . ' = ' . ($taisarv + $taisarv);
-    echo '<br>';
-    settype($taisarv, 'string');
-    echo $taisarv . ' + ' . $taisarv . ' = ' . ($taisarv + $taisarv);
-    echo '<br>';
-    echo gettype($taisarv);
+    echo '  <h1>' . $sisuPealkiri . '</h1>';
 }
 // html lehe lõpp
 echo '
