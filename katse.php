@@ -1,25 +1,26 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: mari-liis.truija
+ * User: anna.karutina
  * Date: 06.12.2018
  * Time: 11:08
  */
-
-echo '<!doctype html><html><head><title>Tsüklid</title></head><body>';
-//tsüklid
-//for
-
+echo '<!doctype html><html><head>
+<title>Tsüklid</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css">
+</head><body>';
+// tsüklid
+// for
 /*
- for ($juhtimisM=algväärtus; $juhtimisM < lõppväärtus; $juhtimisM++){
+ for($juhtimisM=algvaartus; $juhtimisM < lõppväärtus; $juhtimisM++){
     tegevused, mis toimuvad nii kaua, kui $juhtimisM < lõppväärtus kehtib
+}
  */
-
-echo '<table style="border: 1px solid black; border-collapse: collapse; width: 300px;">';
+echo '<table>';
 $ridadeArv = 4;
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr style="border: 1px solid black;">';
-    echo '<td style="text-align: center">';
+    echo '<tr>';
+    echo '<td>';
     echo $reaNumber;
     echo '</td>';
     echo '</tr>';
