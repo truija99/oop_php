@@ -6,59 +6,24 @@
  * Time: 11:08
  */
 
-//muutujate defineerimine
-//$muutujaNimi = väärtus;
-$lehePealkiri = 'Katse leht';
-$sisuPealkiri = 'Muutujate defineerimine';
+echo '<!doctype html><html><head><title>Tsüklid</title></head><body>';
+//tsüklid
+//for
 
-/*//muutujate sisu testvaatamine
-var_dump($lehePealkiri); //funktsioon
-echo '<br>'; //eraldi reale
-var_dump($sisuPealkiri); //funktsioon*/
-
-//andmetüübid
-$taisarv = 7;
-$reaalarv = -2.6;
-$tekst = 'Tere PHP'; //TEKST ON JUTUMÄRKIDES ALATI
-$toevaartusTrue = true; //BOOLEAN
-$toevaartusFalse = false;  //BOOLEAN
-
-//väärtuse tüübi kontroll - gettype($muutujaNimi)
-//väärtuse tüübi teisendus - settype ($muutujaNimi, 'tüüp')
-
-//väljastamine
-//ühendamine 'tekst katkeb '.$muutujaNimi.' tekst jätkub'
-
-
-// tingimuslaused
 /*
- * if (tingimus == true) {
- *      siis toimub see osa
- * } else {
- *      muidu toimub see osa
- * }
- * */
-$naitaSisu = 0;
-$naitaPeidetudInfo = 0;
-echo '
-    <!doctype html>
-    <html>
-        <head>
-            <title>'.$lehePealkiri.'</title>
-        </head>
-        <body>';
-if($naitaSisu == true) {
-    echo '  <h1>' . $sisuPealkiri . '</h1>';
-} else if( $naitaSisu == 1){
-    echo 'see on tavaline info';
-} else if($naitaSisu == 0){
-    echo 'see on tavaline peidetud info';
-} else {
-    echo 'kõik on saladus';
+ for ($juhtimisM=algväärtus; $juhtimisM < lõppväärtus; $juhtimisM++){
+    tegevused, mis toimuvad nii kaua, kui $juhtimisM < lõppväärtus kehtib
+ */
+
+echo '<table style="border: 1px solid black; border-collapse: collapse; width: 300px;">';
+$ridadeArv = 4;
+for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+    echo '<tr style="border: 1px solid black;">';
+    echo '<td style="text-align: center">';
+    echo $reaNumber;
+    echo '</td>';
+    echo '</tr>';
 }
-// html lehe lõpp
-echo '
-        </body>
-    </html>
-';
+echo '</table>';
+echo '</body></html>';
 ?>
