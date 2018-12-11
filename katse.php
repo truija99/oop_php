@@ -38,7 +38,7 @@ $toevaartusFalse = false;  //BOOLEAN
  *      muidu toimub see osa
  * }
  * */
-$naitaSisu = true;
+$naitaSisu = false;
 echo '
     <!doctype html>
     <html>
@@ -49,6 +49,8 @@ echo '
 if($naitaSisu == true) {
     // sisu väljastamine
     echo '  <h1>' . $sisuPealkiri . '</h1>';
+} else {
+    echo 'Sisu on peidetud!';
 }
 // html lehe lõpp
 echo '
