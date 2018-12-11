@@ -23,12 +23,13 @@ $kursusetahis = 'KD';
 $kursusenumber = '18';
 $email = 'mari-liis.truija@khk.ee';
 
-//muutujate esile kutsumine, FUNKTSIOON (ilma selleta ei saaks html osas kirjutada)
+
+/*//muutujate esile kutsumine, FUNKTSIOON (ilma selleta ei saaks html osas kirjutada)
 var_dump($eesnimi);
 var_dump($perenimi);
 var_dump($kursusetahis);
 var_dump($kursusenumber);
-var_dump($email);
+var_dump($email);*/
 
 //kutsun esile, väljastan koodis
 

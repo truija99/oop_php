@@ -11,10 +11,10 @@
 $lehePealkiri = 'Katse leht';
 $sisuPealkiri = 'Muutujate defineerimine';
 
-//muutujate sisu testvaatamine
+/*//muutujate sisu testvaatamine
 var_dump($lehePealkiri); //funktsioon
 echo '<br>'; //eraldi reale
-var_dump($sisuPealkiri); //funktsioon
+var_dump($sisuPealkiri); //funktsioon*/
 
 //andmetüübid
 $taisarv = 7;
@@ -38,8 +38,8 @@ $toevaartusFalse = false;  //BOOLEAN
  *      muidu toimub see osa
  * }
  * */
-$naitaSisu = false;
-$naitaPeidetudInfo = false;
+$naitaSisu = 0;
+$naitaPeidetudInfo = 0;
 echo '
     <!doctype html>
     <html>
@@ -48,14 +48,13 @@ echo '
         </head>
         <body>';
 if($naitaSisu == true) {
-    // sisu väljastamine
     echo '  <h1>' . $sisuPealkiri . '</h1>';
+} else if( $naitaSisu == 1){
+    echo 'see on tavaline info';
+} else if($naitaSisu == 0){
+    echo 'see on tavaline peidetud info';
 } else {
-    if($naitaPeidetudInfo ==  true){
-        echo 'See on peidetud info!';
-    } else {
-        echo 'Kõik on saladus!';
-    }
+    echo 'kõik on saladus';
 }
 // html lehe lõpp
 echo '
