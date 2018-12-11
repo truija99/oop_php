@@ -45,3 +45,12 @@ echo'
         </body>
     </html>
 ';
+
+
+
+//Ülesanne 2
+/*
+ * Loo muutuja nimega värv, mille algvääruseks pane "red";
+ * Koosta if-else if-else lause, mis väljastab teksti "Värviline tekst" vastavalt määratud väärtusega.
+ * Katseta vähemalt kolme HTML värviga - red, blue, orange
+*/
