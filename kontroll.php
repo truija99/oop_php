@@ -1,56 +1,50 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: mari-liis.truija
+ * User: anna.karutina
  * Date: 11.12.2018
  * Time: 9:22
  */
-
-//Ülesanne 1
-/*Loo prgogramm, mille sees:
+echo '<html><head><title>Ülesanded</title></head><body>';
+// Ülesanne 1
+/* Loo programm, mille sees:
 a) defineeritud muutujate abil
-    Sinu ees -ja perekonnanimi
-    Kursuse tähis
-    Kursuse number
+    Sinu ees- ja perenimi
+    kursuse tähis
+    kursuse number
     Sinu kooli email
-b) Väljastatud muutujate väärtused koos sobiva tekstiga hmtl faili kujul
+b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
 */
+echo '<h4>Ülesanne 1</h4>';
+$eesNimi = 'Mari-Liis';
+$pereNimi = 'Truija';
+$kursus = 'KD';
+$kursuseTahis = "18";
+$email = 'mari-liis.truija@ikt.khk.ee';
+echo 'Eesnimi '.$eesNimi.'<br>';
+echo 'Perenimi '.$pereNimi.'<br>';
+echo 'Kursus '.$kursus.'<br>';
+echo 'Kursuse tähis '.$kursuseTahis.'<br>';
+echo 'email '.$email.'<br>';
+echo '<hr>';
 
-//muutujate defineerimine - ainult nimetamine
-$eesnimi = 'Mari-Liis';
-$perenimi = 'Truija';
-$kursusetahis = 'KD';
-$kursusenumber = '18';
-$email = 'mari-liis.truija@khk.ee';
-
-
-/*//muutujate esile kutsumine, FUNKTSIOON (ilma selleta ei saaks html osas kirjutada)
-var_dump($eesnimi);
-var_dump($perenimi);
-var_dump($kursusetahis);
-var_dump($kursusenumber);
-var_dump($email);*/
-
-//kutsun esile, väljastan koodis
-
-echo'
-    <!doctype html> 
-        <head>
-            <title>Ülesanne1</title>
-        </head>
-        <body>
-            <h1>'.$eesnimi.' '.$perenimi.'</h1>
-            <h1>'.$kursusetahis.' '.$kursusenumber.'</h1>
-            <h1>'.$email.'</h1>
-        </body>
-    </html>
-';
-
-
-
-//Ülesanne 2
-/*
- * Loo muutuja nimega värv, mille algvääruseks pane "red";
- * Koosta if-else if-else lause, mis väljastab teksti "Värviline tekst" vastavalt määratud väärtusega.
- * Katseta vähemalt kolme HTML värviga - red, blue, orange
+// Ülesanne 2
+/* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
+Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
+vastavalt määratud väärtusega. Katseta vähemalt kolme HTML värviga -
+red, blue, orange - vastavalt tingimuslauses määra punane, sinine ja orange
 */
+echo '<h4>Ülesanne 2</h4>';
+$varv = 'orange';
+echo '<p style="color: ';
+if($varv == 'punane'){
+    echo 'red';
+} else if($varv == 'sinine'){
+    echo 'blue';
+} else if($varv == 'orange'){
+    echo 'orange';
+} else {
+    echo 'black';
+}
+echo ';">Värviline tekst</p>';
+echo '</body></html>';
