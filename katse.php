@@ -39,6 +39,7 @@ $toevaartusFalse = false;  //BOOLEAN
  * }
  * */
 $naitaSisu = false;
+$naitaPeidetudInfo = false;
 echo '
     <!doctype html>
     <html>
@@ -50,7 +51,11 @@ if($naitaSisu == true) {
     // sisu väljastamine
     echo '  <h1>' . $sisuPealkiri . '</h1>';
 } else {
-    echo 'Sisu on peidetud!';
+    if($naitaPeidetudInfo ==  true){
+        echo 'See on peidetud info!';
+    } else {
+        echo 'Kõik on saladus!';
+    }
 }
 // html lehe lõpp
 echo '
