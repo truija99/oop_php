@@ -18,13 +18,17 @@ echo '<!doctype html><html><head>
  */
 echo '<table>';
 $ridadeArv = 4;
+$veergudeArv = 6;
 for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
     echo '<tr>';
-    echo '<td>';
-    echo $reaNumber;
-    echo '</td>';
-    echo '</tr>';
-}
+        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            echo '<td>';
+            echo $veeruNumber;
+            echo '</td>';
+        }
+            echo '</tr>';
+    }
 echo '</table>';
 echo '</body></html>';
 ?>
+

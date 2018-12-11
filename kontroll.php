@@ -21,11 +21,11 @@ $pereNimi = 'Truija';
 $kursus = 'KD';
 $kursuseTahis = "18";
 $email = 'mari-liis.truija@ikt.khk.ee';
-echo 'Eesnimi '.$eesNimi.'<br>';
-echo 'Perenimi '.$pereNimi.'<br>';
-echo 'Kursus '.$kursus.'<br>';
-echo 'Kursuse tähis '.$kursuseTahis.'<br>';
-echo 'email '.$email.'<br>';
+echo 'Eesnimi: '.$eesNimi.'<br>';
+echo 'Perenimi: '.$pereNimi.'<br>';
+echo 'Kursus: '.$kursus.'<br>';
+echo 'Kursuse tähis:'.$kursuseTahis.'<br>';
+echo 'Email:'.$email.'<br>';
 echo '<hr>';
 
 // Ülesanne 2
