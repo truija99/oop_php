@@ -69,11 +69,13 @@ function htmlTabel($ridadeArv = 0, $veergudeArv = 0){
     $tabel = $tabel.'</table>';
     return $tabel;
 }
+
 // lehe sisu väljastamine
 echo '<!doctype html><html><head>
 <title>Funktsioonid</title>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
+
 // kutsume funktsioon tööle
 $tabel1 = htmlTabel(4, 4);
 echo $tabel1;

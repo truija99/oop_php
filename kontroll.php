@@ -32,6 +32,7 @@ echo '<hr>';
 
 
 
+
 // Ülesanne 2
 /* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
 Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
@@ -82,13 +83,13 @@ echo '<hr>';
 
 
 
-
 // Ülesanne 4
 /* Muuda htmlTabel() funktsioon nii, et see võtaks parameetrina numbrite massiivi
 ja väljastas HTML tabelina
 */
 
 echo '<h4>Ülesanne 4 </h4>';
+
 function htmlTabel($massiiv){
     echo '<table>';
     foreach($massiiv as $rida){
@@ -102,6 +103,7 @@ function htmlTabel($massiiv){
     }
     echo '</table>';
 }
+
 $numbrid = array(
     array(1, 2, 3),
     array(4, 5, 6)
@@ -114,4 +116,14 @@ $symbolid = array(
     array('g', 'h')
 );
 htmlTabel($symbolid);
+
+
+
+// Ülesanne 5
+
+
+
+
+
+
 echo '</body></html>';
