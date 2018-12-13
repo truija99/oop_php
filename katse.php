@@ -15,17 +15,18 @@
  }
  */
 function htmlTable($ridadeArv, $veergudeArv){
-    echo '<table>';
+    $tabel = '<table>';
     for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-        echo '<tr>';
+        $tabel = $tabel.'<tr>';
             for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-                echo '<td>';
-                echo $veeruNumber;
-                echo '</td>';
+                $tabel = $tabel.'<td>';
+                $tabel = $tabel.$veeruNumber;
+                $tabel = $tabel.'</td>';
             }
-                echo '</tr>';
+        $tabel = $tabel.'</tr>';
         }
-    echo '</table>';
+     $tabel = $tabel.'</table>';
+     return $tabel; //tagastatakse tabel, veel ei väljastata (ainult echo kaudu)
 }
 
 //lehe sisu väljastamine
@@ -35,9 +36,16 @@ echo '<!doctype html><html><head>
 </head><body>';
 
 //kutsume funktsiooni tööle
-htmlTable(4, 4);
+$tabel1 = htmlTable(4, 4);
+echo $tabel1;
 echo '<hr>';
-htmlTable(2, 5);
+
+$tabel2 = htmlTable(2, 4);
+echo $tabel2;
+echo '<hr>';
+$tabel3 = htmlTable(1, 3);
+echo $tabel3;
+echo '<hr>';
 echo '</body></html>';
 ?>
 
