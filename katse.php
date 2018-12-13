@@ -5,17 +5,16 @@
  * Date: 06.12.2018
  * Time: 11:08
  */
-echo '<!doctype html><html><head>
-<title>Tsüklid</title>
-<link rel="stylesheet" type="text/css" href="katsestyle.css">
-</head><body>';
-// tsüklid
-// for
+
+// funktsioonid
+//f function
 /*
- for($juhtimisM=algvaartus; $juhtimisM < lõppväärtus; $juhtimisM++){
-    tegevused, mis toimuvad nii kaua, kui $juhtimisM < lõppväärtus kehtib
-}
+ function funktsiooniNimi({$param1, $param2,...., $paramN}) {
+      kõik tegevused,
+      mis antud funktsiooni sees toimuvad
+ }
  */
+function htmlTable(){
 echo '<table>';
 $ridadeArv = 4;
 $veergudeArv = 6;
@@ -29,6 +28,16 @@ for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
             echo '</tr>';
     }
 echo '</table>';
+}
+
+//lehe sisu väljastamine
+echo '<!doctype html><html><head>
+<title>Funktsioonid</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css">
+</head><body>';
+
+//kutsume funktsiooni tööle
+htmlTable();
 echo '</body></html>';
 ?>
 
