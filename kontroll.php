@@ -88,13 +88,14 @@ echo '<hr>';
 ja väljastas HTML tabelina
 */
 
+echo '<h4>Ülesanne 4 </h4>';
 function htmlTabel($massiiv){
     echo '<table>';
-    for($reaNumber = 0; $reaNumber < count($massiiv); $reaNumber++){
+    foreach($massiiv as $rida){
         echo '<tr>';
-        for($veeruNumber = 0; $veeruNumber < count($massiiv[$reaNumber]); $veeruNumber++) {
+        foreach($rida as $element) {
             echo '<td>';
-            echo $massiiv[$reaNumber][$veeruNumber];
+            echo $element;
             echo '</td>';
         }
         echo '</tr>';
