@@ -77,4 +77,40 @@ for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
     echo '</tr>';
 }
 echo '</table>';
+echo '<hr>';
+
+
+
+
+
+// Ülesanne 4
+/* Muuda htmlTabel() funktsioon nii, et see võtaks parameetrina numbrite massiivi
+ja väljastas HTML tabelina
+*/
+
+function htmlTabel($massiiv){
+    echo '<table>';
+    for($reaNumber = 0; $reaNumber < count($massiiv); $reaNumber++){
+        echo '<tr>';
+        for($veeruNumber = 0; $veeruNumber < count($massiiv[$reaNumber]); $veeruNumber++) {
+            echo '<td>';
+            echo $massiiv[$reaNumber][$veeruNumber];
+            echo '</td>';
+        }
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+$numbrid = array(
+    array(1, 2, 3),
+    array(4, 5, 6)
+);
+htmlTabel($numbrid);
+echo '<br>';
+$symbolid = array(
+    array('a', 'b'),
+    array('d', 'e'),
+    array('g', 'h')
+);
+htmlTabel($symbolid);
 echo '</body></html>';
