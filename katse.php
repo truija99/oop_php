@@ -6,14 +6,23 @@
  * Time: 11:08
  */
 
-// funktsioonid
-//f function
+// massiivid
+// array()
 /*
- function funktsiooniNimi({$param1, $param2,...., $paramN}) {
-      kõik tegevused,
-      mis antud funktsiooni sees toimuvad
- }
+$massiiv = array(); // tühi massiiv - ei ole sees midagi
+$massiiv [] = väärtus
+
  */
+
+$nimed = array();
+$nimed[] = 'Mari-Liis';
+$nimed[] = 'Elen';
+var_dump($nimed); //väljastab selle ülemise asja seal
+echo '<pre>';
+print_r($nimed);
+echo '/<pre>';
+
+
 function htmlTable($ridadeArv, $veergudeArv){
     $tabel = '<table>';
     for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
@@ -43,7 +52,7 @@ echo '<hr>';
 $tabel2 = htmlTable(2, 4);
 echo $tabel2;
 echo '<hr>';
-$tabel3 = htmlTable(1, 3);
+$tabel3 = htmlTable(1, 1);
 echo $tabel3;
 echo '<hr>';
 echo '</body></html>';
