@@ -14,20 +14,18 @@
       mis antud funktsiooni sees toimuvad
  }
  */
-function htmlTable(){
-echo '<table>';
-$ridadeArv = 4;
-$veergudeArv = 6;
-for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
-    echo '<tr>';
-        for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-            echo '<td>';
-            echo $veeruNumber;
-            echo '</td>';
+function htmlTable($ridadeArv, $veergudeArv){
+    echo '<table>';
+    for($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++){
+        echo '<tr>';
+            for($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+                echo '<td>';
+                echo $veeruNumber;
+                echo '</td>';
+            }
+                echo '</tr>';
         }
-            echo '</tr>';
-    }
-echo '</table>';
+    echo '</table>';
 }
 
 //lehe sisu väljastamine
@@ -37,7 +35,9 @@ echo '<!doctype html><html><head>
 </head><body>';
 
 //kutsume funktsiooni tööle
-htmlTable();
+htmlTable(4, 4);
+echo '<hr>';
+htmlTable(2, 5);
 echo '</body></html>';
 ?>
 
