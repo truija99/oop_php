@@ -12,21 +12,48 @@ $massiiv = array(); // tühi massiiv - ei ole sees midagi
 $massiiv[] = väärtus;
  */
 
-//massiivi loomine
+
+// massiivi loomine
 $numbrid = array(
     array(1, 2, 3),
-    array(4, 5, 6),
-    array(7, 8, 9)
+    array(4, 5, 6)
 );
-
-//massiivi sisu test kontroll
+// massiivi sisu test kontroll
 var_dump($numbrid);
 echo '<pre>';
 print_r($numbrid);
 echo '</pre>';
 
-// massiivi elemendi väljatamine
+// massiivi elemendi väljastamine
 echo $numbrid[1][1];
+echo '<br>';
+
+// massiivi suuruse kontroll - meil see on ridade arv
+$ridadeArv = count($numbrid);
+echo $ridadeArv;
+echo '<br>';
+
+// veergudeArv
+$veergudeArv = count($numbrid[0]);
+echo $veergudeArv;
+echo '<br>';
+
+// massiivi väljastamine for
+for($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++){
+    for($veeruNumber = 0; $veeruNumber < $veergudeArv; $veeruNumber++){
+        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp;';
+    }
+    echo '<br>';
+}
+
+// massiivi väljastamine foreach abil
+foreach ($numbrid as $rida){
+    foreach ($rida as $number);{
+        echo $number.'&nbsp';
+    }
+    echo  '<br>';
+}
+
 
 function htmlTabel($ridadeArv = 0, $veergudeArv = 0){
     $tabel = '<table>';
@@ -42,7 +69,6 @@ function htmlTabel($ridadeArv = 0, $veergudeArv = 0){
     $tabel = $tabel.'</table>';
     return $tabel;
 }
-
 // lehe sisu väljastamine
 echo '<!doctype html><html><head>
 <title>Funktsioonid</title>
