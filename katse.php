@@ -13,12 +13,23 @@ $massiiv[] = väärtus;
  */
 
 
+//abifunktsioon
+function suguVarv($sugu){
+    if($sugu == 'naine'){
+        echo '<div style="color: red">';
+    } else {
+        echo '<div style="color: blue">';
+    }
+}
+
 //koostame funktsiooni
-function valjastaInfo($massiiv) {
-    foreach ($massiiv as $alamMassiivNimi => $alamMassiivAndmed){
-        echo '<h5>'.$alamMassiivNimi.'</h5><br>';
+function valjastaInfo($massiiv){
+    foreach ($massiiv as $alammassiivNimi => $alamMassiivAndmed){
+        suguVarv($alamMassiivAndmed['sugu']);
+        echo '<h5>'.$alammassiivNimi.'</h5><br>';
         foreach ($alamMassiivAndmed as $elemendiNimi => $elemendiVaartus){
-            echo $elemendiNimi. ' - '.$elemendiVaartus.'<br>';
+            suguVarv($alamMassiivAndmed['sugu']);
+            echo $elemendiNimi.' - '.$elemendiVaartus.'</div>';
         }
         echo '<hr>';
     }
@@ -39,7 +50,6 @@ $perekondPeppa = array(
         'sugu' => 'mees'
     )
 );
-
 
 
 // lehe sisu väljastamine
