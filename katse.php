@@ -1,94 +1,77 @@
+<style>
+    .number, input[type = "text"]{
+        width: 50px;
+        float: left;
+    }
+    input[type="submit"]{
+    }
+    .paneel {
+        width: 130px;
+        height: 75px;
+        padding: 20px;
+        background: lightblue;
+    }
+    .operation {
+        width: 30px;
+        float: left;
+    }
+</style>
 <?php
-/**
- * Created by PhpStorm.
- * User: anna.karutina
- * Date: 06.12.2018
- * Time: 11:08
- */
-// massiivid
-// array()
-/*
-$massiiv = array(); // tühi massiiv - ei ole sees midagi
-$massiiv[] = väärtus;
- */
-
-
-//abifunktsioon
-function suguVarv($sugu){
-    if($sugu == 'naine'){
-        echo '<div style="color: red">';
+function vorm($tulemus = false){
+    echo '<form method="post" action="'.$_SERVER['PHP_SELF'].'">
+        <div class="paneel">
+            <div class="number">
+                <input type="text" name="number1">
+            </div>
+            <div class="operation">
+                <select name="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+            </div>
+            <div class="number">
+                <input type="text" name="number2">
+            </div>
+            <div style="clear: both"></div>
+            <br>
+            <div>
+                <label style="float: left"> Tulemus:</label> 
+                <input type="text" value="'.$tulemus.'">    
+            </div>
+            <br>
+            <input type="submit" value="Saada!">
+        </div>
+        
+    </form>';
+}
+function calc($arv1, $arv2, $operation){
+    if($operation == '+'){
+        $tulemus =  $arv1 + $arv2;
+    } else if ($operation == '-'){
+        $tulemus = $arv1 - $arv2;
+    } else if ($operation == '*'){
+        $tulemus = $arv1 * $arv2;
+    }else if ($operation == '/'){
+        $tulemus = $arv1 / $arv2;
     } else {
-        echo '<div style="color: blue">';
+        $tulemus = false;
     }
+    return $tulemus;
 }
-
-//koostame funktsiooni
-function valjastaInfo($massiiv){
-    foreach ($massiiv as $alamMassiivNimi => $alamMassiivAndmed){
-        suguVarv($alamMassiivAndmed['sugu']);
-        echo '<h5>'.$alamMassiivNimi.'</h5><br>';
-        foreach ($alamMassiivAndmed as $elemendiNimi => $elemendiVaartus){
-            suguVarv($alamMassiivAndmed['sugu']);
-            echo $elemendiNimi.' - '.$elemendiVaartus.'</div>';
-        }
-        echo '<hr>';
+if(empty($_POST)){
+    vorm();
+} else {
+    $number1 = $_POST['number1'];
+    $number2 = $_POST['number2'];
+    $operation = $_POST['operation'];
+    if(empty($number1) or empty($number2)){
+        echo 'Mõlemad arvud tuleb sisestada!<br>';
+        echo '<a href="'.$_SERVER['PHP_SELF'].'">Proovi uuesti!</a>';
+        exit;
     }
+    $tulemus = calc($number1, $number2, $operation);
+    vorm($tulemus);
 }
-
-
-//funktsioon soo järgi sorteerimiseks
-function suguVordlus($porsas1, $porsas2){
-    if($porsas1 ['sugu'] == $porsas2 ['sugu']) {
-        return 0; }
-    return ($porsas1['sugu'] < $porsas2['sugu']) ? -1 : 1; //-1 liigutab vasakule
-}
-
-/*function sortSooJargi($perekond){
-       // usort($perekond, 'suguVordlus');
-}
-*/
-
-// massiivi loomine
-$perekondPeppa = array(
-    'Peppa' => array(
-        'nimi' => 'Peppa',
-        'amet' => 'põrsaslaps',
-        'vanus' => 5,
-        'sugu' => 'naine'
-    ),
-    'Georg' => array(
-        'nimi' => 'Georg',
-        'amet' => 'põrsaslaps',
-        'vanus' => 2,
-        'sugu' => 'mees'
-    ),
-        'Põrsas Ema' => array(
-        'nimi' => 'Ema',
-        'amet' => 'Ema Põrsas',
-        'vanus' => 35,
-        'sugu' => 'naine'
-    ),
-        'Põrsas Isa' => array(
-        'nimi' => 'Isa',
-        'amet' => 'Isa Põrsas',
-        'vanus' => 36,
-        'sugu' => 'mees'
-    ),
-);
-
-//sort($perekondPeppa);
-//asort($perekondPeppa);
-//ksort($perekondPeppa);
-uasort ($perekondPeppa, 'suguVordlus');
-
-
-// lehe sisu väljastamine
-echo '<!doctype html><html><head>
-<title>Massiivid</title>
-<link rel="stylesheet" type="text/css" href="katsestyle.css">
-</head><body>';
-
-valjastaInfo($perekondPeppa);
-
-echo '</body></html>';
 ?>
