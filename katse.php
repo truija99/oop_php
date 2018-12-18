@@ -24,9 +24,9 @@ function suguVarv($sugu){
 
 //koostame funktsiooni
 function valjastaInfo($massiiv){
-    foreach ($massiiv as $alammassiivNimi => $alamMassiivAndmed){
+    foreach ($massiiv as $alamMassiivNimi => $alamMassiivAndmed){
         suguVarv($alamMassiivAndmed['sugu']);
-        echo '<h5>'.$alammassiivNimi.'</h5><br>';
+        echo '<h5>'.$alamMassiivNimi.'</h5><br>';
         foreach ($alamMassiivAndmed as $elemendiNimi => $elemendiVaartus){
             suguVarv($alamMassiivAndmed['sugu']);
             echo $elemendiNimi.' - '.$elemendiVaartus.'</div>';
@@ -34,6 +34,19 @@ function valjastaInfo($massiiv){
         echo '<hr>';
     }
 }
+
+
+//funktsioon soo järgi sorteerimiseks
+function suguVordlus($porsas1, $porsas2){
+    if($porsas1 ['sugu'] == $porsas2 ['sugu']) {
+        return 0; }
+    return ($porsas1['sugu'] < $porsas2['sugu']) ? -1 : 1; //-1 liigutab vasakule
+}
+
+/*function sortSooJargi($perekond){
+       // usort($perekond, 'suguVordlus');
+}
+*/
 
 // massiivi loomine
 $perekondPeppa = array(
@@ -48,8 +61,25 @@ $perekondPeppa = array(
         'amet' => 'põrsaslaps',
         'vanus' => 2,
         'sugu' => 'mees'
-    )
+    ),
+        'Põrsas Ema' => array(
+        'nimi' => 'Ema',
+        'amet' => 'Ema Põrsas',
+        'vanus' => 35,
+        'sugu' => 'naine'
+    ),
+        'Põrsas Isa' => array(
+        'nimi' => 'Isa',
+        'amet' => 'Isa Põrsas',
+        'vanus' => 36,
+        'sugu' => 'mees'
+    ),
 );
+
+//sort($perekondPeppa);
+//asort($perekondPeppa);
+//ksort($perekondPeppa);
+uasort ($perekondPeppa, 'suguVordlus');
 
 
 // lehe sisu väljastamine
