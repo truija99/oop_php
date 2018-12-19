@@ -8,6 +8,8 @@
 
 
 session_start(); //alustame anonüümse sessiooniga
+echo session_id(); //näitab milline session töötab - pikk nr
+echo '<br>';
 echo '<div style="color:red">'.$_SESSION['viga'].'</div>';
 
 
