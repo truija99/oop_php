@@ -19,3 +19,4 @@ if(empty($_POST)){
     echo 'parool = ' . $_POST['passwd'] . '<br>';
     echo 'Tere tulemast ' . $_POST['username'] . '!<br>';
 }
+
