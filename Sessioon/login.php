@@ -6,6 +6,11 @@
  * Time: 10:36
  */
 
+
+session_start(); //alustame anonüümse sessiooniga
+echo '<div style="color:red">'.$_SESSION['viga'].'</div>';
+
+
 //sessioon/login.php
 ?>
 
